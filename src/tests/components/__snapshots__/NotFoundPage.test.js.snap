@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render not found page 1`] = `
+<div>
+  <h1>
+    404! Ooops, not found Go to: 
+    <Link
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+  </h1>
+</div>
+`;
