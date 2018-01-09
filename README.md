@@ -1,6 +1,6 @@
 # React Expensify App
 
-An app that simulates Expensify functionality written in React and Redux.
+An expense tracker written in React and Redux.
 
 
 
