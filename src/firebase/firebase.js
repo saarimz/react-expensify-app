@@ -14,59 +14,6 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-export { firebase, database as default };
-/*
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
-// child_removed
-
-database.ref('expenses').on('child_removed', (snapshot) => {
-    console.log(snapshot.key,snapshot.val());
-});
-
-// child_changed
-
-database.ref('expenses').on('child_changed', (snapshot) => {
-    console.log(snapshot.key,snapshot.val());
-});
-
-// child_added
-
-database.ref('expenses').on('child_added', (snapshot) => {
-    console.log(snapshot.key,snapshot.val());
-})
-
-const expenses = [
-    {
-        description: 'Rent',
-        note: 'January rent',
-        amount: 42000,
-        createdAt: 1000
-    },
-    {
-        description: 'Gas bill',
-        note: 'Bill for Con Edison',
-        amount: 150,
-        createdAt: 10000
-    },
-    {
-        description: 'Electricity Bill',
-        note: 'Electric bill for july',
-        amount: 110,
-        createdAt: 500
-    }
-];
-
-expenses.forEach((expense) => database.ref('expenses').push(expense)); 
-
-
-/*
-const getExpenses = database.ref('expenses').on('value', (snapshot) => {
-    const expenses = [];
-    snapshot.forEach((childSnapshot) => {
-        expenses.push({
-            id: childSnapshot.key,
-            ...childSnapshot.val()
-        });
-    })
-    console.log(expenses);
-});  */
+export { firebase, googleAuthProvider, database as default };
