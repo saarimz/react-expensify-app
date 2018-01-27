@@ -1,0 +1,25 @@
+.bttn {
+    background-color: $blue;
+    color: $light-grey;
+    padding: $s-size $m-size;
+    margin: 0 auto;
+    border: none;
+    border-radius: $xs-size;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: $font-size-large;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.bttn--link {
+    border: none;
+    margin: 0;
+    background: none;
+}
+
+.bttn--secondary {
+    background-color: grey;
+    color: $white;
+}
